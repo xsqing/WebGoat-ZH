@@ -1,13 +1,11 @@
-=== Data Control Language (DCL)
+=== 数据控制语言(DCL)
 
-Data control language is used to implement access control logic in a database. DCL can be used to revoke and grant user privileges on database objects such as tables, views, and functions.
+数据控制语言用于实现数据库中的访问控制逻辑。DCL可用于撤销和授予用户对表、视图和函数等数据库对象的权限。
 
-If an attacker successfully "injects" DCL type SQL commands into a database, he can violate the  confidentiality (using GRANT commands) and availability (using REVOKE commands) of a system. For example, the attacker could grant himself admin privileges on the database or revoke the privileges of the true administrator.
+如果攻击者成功将DCL类型的SQL命令"注入"到数据库中，他就可以破坏系统的机密性(使用GRANT命令)和可用性(使用REVOKE命令)。例如，攻击者可以授予自己对数据库的管理员权限，或者撤销真正管理员的权限。
 
+* DCL命令用于实现对数据库对象的访问控制。
+* GRANT - 授予用户对数据库对象的访问权限
+* REVOKE - 撤销之前使用GRANT授予的用户权限
 
-* DCL commands are used to implement access control on database objects.
-* GRANT -  give a user access privileges on database objects
-* REVOKE - withdraw user privileges that were previously given using GRANT
-
-
-Try to grant rights to the table `grant_rights` to user `unauthorized_user`:
+尝试将表`grant_rights`的权限授予用户`unauthorized_user`：

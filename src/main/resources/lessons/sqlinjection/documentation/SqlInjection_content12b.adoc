@@ -1,6 +1,6 @@
-== Input validation alone is not enough!!
+== 仅靠输入验证是不够的！！
 
-So the last attempt to validate if the query did not contain any spaces failed, the development team went further
-into the direction of only performing input validation, can you find out where it went wrong this time?
+上次尝试验证查询是否包含空格的尝试失败了，开发团队进一步
+朝着仅执行输入验证的方向发展，您能找出这次的问题出在哪里吗？
 
-Read about the lesson goal link:start.mvc#lesson/SqlInjectionAdvanced.lesson/2[here].
+点击此处查看课程目标：link:start.mvc#lesson/SqlInjectionAdvanced.lesson/2[这里]。

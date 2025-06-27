@@ -1,15 +1,12 @@
 
-== 2FA Password Reset
+== 双因素认证绕过
 
-An excellent example of authentication bypass is a recent (2016) example (https://henryhoggard.co.uk/blog/Paypal-2FA-Bypass). He could not receive an SMS with a code, so he opted for
-an alternative method, which involved security questions.  Using a proxy, removed the parameters entirely and won.
+认证绕过的一个很好的例子是2016年的一个实际案例 (https://henryhoggard.co.uk/blog/Paypal-2FA-Bypass)。由于无法接收包含验证码的短信，用户选择了另一种验证方式，即回答安全问题。通过使用代理工具，攻击者完全移除了相关参数，从而成功绕过了验证。
 
-image::images/paypal-2fa-bypass.png[Paypal 2FA bypass,1397,645,style="lesson-image"]
+image::images/paypal-2fa-bypass.png[Paypal 2FA绕过,1397,645,style="lesson-image"]
 
+=== 场景描述
 
-=== The Scenario
+您正在重置密码，但使用的设备或位置未被服务商识别。因此，您需要回答之前设置的安全问题。但问题是，这些安全问题的答案存储在另一台设备上（不在您身边），而您也不记得具体答案了。
 
-You reset your password, but do it from a location or device that your provider does not recognize. So you need to answer the security questions you set up.  The other issue is
-Those security questions are also stored on another device (not with you), and you don't remember them.
-
-You have already provided your username/email and opted for the alternative verification method.
+您已经提供了用户名/邮箱，并选择了替代的验证方式。

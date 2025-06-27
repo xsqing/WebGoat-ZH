@@ -1,13 +1,13 @@
-== Concept
+== 概念
 
-This lesson describes what Structured Query Language (SQL) is and how it can be manipulated to perform tasks that were not the original intent of the developer.
+本课程介绍了结构化查询语言(SQL)是什么，以及如何操纵它来执行开发人员原始意图之外的任务。
 
-=== Goals
+=== 目标
 
-* The user will have a basic understanding of how SQL works and what it is used for
-* The user will have a basic understanding of what SQL injection is and how it works
-* The user will demonstrate knowledge on:
-** DML, DDL and DCL
-** String SQL injection
-** Numeric SQL injection
-** How SQL injection violates the CIA triad
+* 用户将对SQL的工作原理及其用途有基本了解
+* 用户将对SQL注入及其工作原理有基本了解
+* 用户将展示以下知识：
+** 数据操作语言(DML)、数据定义语言(DDL)和数据控制语言(DCL)
+** 字符串型SQL注入
+** 数字型SQL注入
+** SQL注入如何违反CIA三要素(机密性、完整性和可用性)

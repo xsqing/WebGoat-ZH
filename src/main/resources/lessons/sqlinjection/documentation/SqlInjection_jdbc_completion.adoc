@@ -1,5 +1,5 @@
-== Try it! Writing safe code
+== 试一试！编写安全代码
 
-You can see some code down below, but the code is incomplete. Complete the code, so that it's no longer vulnerable to a SQL injection! Use the classes and methods you have learned before.
+您可以在下面看到一些代码，但代码不完整。请完成代码，使其不再容易受到SQL注入攻击！使用您之前学过的类和方法。
 
-The code has to retrieve the status of the user based on the name and the mail address of the user. Both the name and the mail are in the string format.
+该代码需要根据用户的姓名和电子邮件地址检索用户的状态。姓名和邮件都是字符串格式。

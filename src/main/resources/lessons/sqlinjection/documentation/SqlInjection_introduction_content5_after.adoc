@@ -1,10 +1,10 @@
-== Examples
+== 示例
 
-SQL injection can be used for far more than reading the data of a single of user. The following are just a few examples of data a hacker could input to a form field (or anywhere user input is accepted) in an attempt to exploit a SQL injection vulnerability:
+SQL注入的用途远不止读取单个用户的数据。以下是黑客可能输入到表单字段（或任何接受用户输入的地方）以尝试利用SQL注入漏洞的一些数据示例：
 
 * `+Smith' OR '1' = '1+` +
-results in `+SELECT * FROM users WHERE name = 'Smith' OR TRUE;+` which will return all entries from the users table
+会导致 `+SELECT * FROM users WHERE name = 'Smith' OR TRUE;+`，这将返回users表中的所有条目
 * `+Smith' OR 1 = 1; --+` +
-results in `+SELECT * FROM users WHERE name = 'Smith' OR TRUE;--';+` which, like the first example, will also return all entries from the users table
+会导致 `+SELECT * FROM users WHERE name = 'Smith' OR TRUE;--';+`，与第一个示例类似，也会返回users表中的所有条目
 * `+Smith'; DROP TABLE users; TRUNCATE audit_log; --+` +
-chains multiple SQL-Commands in order to both DROP the users table and delete all entries from the audit_log table
+链接多个SQL命令，以同时删除users表并清空audit_log表中的所有条目

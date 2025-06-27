@@ -1,7 +1,7 @@
-== Try It! Pulling data from other tables
+== 试一试！从其他表中提取数据
 
-The input field below is used to get data from a user by their last name. +
-The table is called 'user_data':
+下面的输入字段用于通过姓氏获取用户数据。
+表名为'user_data'：
 
 -------------------------------------------------------
 CREATE TABLE user_data (userid int not null,
@@ -13,19 +13,18 @@ CREATE TABLE user_data (userid int not null,
                         login_count int);
 -------------------------------------------------------
 
-Through experimentation you found that this field is susceptible to SQL injection.
-Now you want to use that knowledge to get the contents of another table. +
-The table you want to pull data from is:
+通过实验，您发现此字段容易受到SQL注入攻击。
+现在，您想利用这些知识获取另一个表的内容。
+您想要从中提取数据的表是：
 
 -------------------------------------------------------
 CREATE TABLE user_system_data (userid int not null primary key,
-			                   user_name varchar(12),
-			                   password varchar(10),
-			                   cookie varchar(30));
+							   user_name varchar(12),
+							   password varchar(10),
+							   cookie varchar(30));
 -------------------------------------------------------
 
-*6.a)* Retrieve all data from the table +
-*6.b)* When you have figured it out.... What is Dave's password?
+*6.a)* 从表中检索所有数据
+*6.b)* 当您找到方法后...Dave的密码是什么？
 
-Note: There are multiple ways to solve this Assignment. One is by using a UNION, the other by appending
-a new SQL statement. Maybe you can find both of them.
+注意：解决此任务有多种方法。一种是使用UNION，另一种是附加新的SQL语句。也许您可以找到这两种方法。

@@ -1,13 +1,13 @@
-== Compromising Availability
-After successfully compromising confidentiality and integrity in the previous lessons, we are now going to compromise the third element of the CIA triad: *availability*.
+== 破坏可用性
+在前面的课程中，我们已经成功破坏了机密性和完整性，现在我们将破坏CIA三要素中的第三个要素：*可用性*。
 
-There are many different ways to violate availability.
-If an account is deleted or its password gets changed, the actual owner cannot access this account anymore.
-Attackers could also try to delete parts of the database, or even drop the whole database, in order to make the data inaccessible.
-Revoking the access rights of admins or other users is yet another way to compromise availability; this would prevent these users from accessing either specific parts of the database or even the entire database as a whole.
+破坏可用性有很多不同的方法。
+如果账户被删除或其密码被更改，实际所有者将无法再访问该账户。
+攻击者还可能尝试删除部分数据库，甚至删除整个数据库，以使数据无法访问。
+撤销管理员或其他用户的访问权限是破坏可用性的另一种方式；这将阻止这些用户访问数据库的特定部分，甚至整个数据库。
 
-=== It is your turn!
-Now you are the top earner in your company.
-But do you see that?
-There seems to be a *access_log* table, where all your actions have been logged to! +
-Better go and _delete it_ completely before anyone notices.
+=== 轮到您了！
+现在您是公司中收入最高的人。
+但是您看到了吗？
+似乎有一个*access_log*表，记录了您的所有操作！
+最好在有人发现之前_完全删除它_。

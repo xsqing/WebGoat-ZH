@@ -1,4 +1,5 @@
-== The Quiz
+== 小测验
 
-What type of HTTP verb does WebGoat use when submitting the form in this assignment? A POST or a GET?
-And can you find the magic number?
+在这个练习中，WebGoat 在提交表单时使用了哪种 HTTP 方法？是 POST 还是 GET？
+
+您能找到那个神奇的数字吗？

@@ -24,38 +24,37 @@
                   method="POST" name="form"
                   successCallback="onBypassResponse"
                   th:action="@{/auth-bypass/verify-account}">
-                <p>Verify Your Account by answering the questions below:</p>
+                <p th:text="#{auth-bypass.verify.title}">Verify Your Account by answering the questions below:</p>
 
-                <p>What is the name of your favorite teacher?</p>
+                <p th:text="#{auth-bypass.teacher.question}">What is the name of your favorite teacher?</p>
                 <input name="secQuestion0" value="" type="TEXT" /><br/>
 
-                <p>What is the name of the street you grew up on?</p>
+                <p th:text="#{auth-bypass.street.question}">What is the name of the street you grew up on?</p>
                 <input name="secQuestion1" value="" type="TEXT" /><br/><br />
 
                 <input type="hidden" name="jsEnabled" value="1" />
                 <input type="hidden" name="verifyMethod" value="SEC_QUESTIONS" />
                 <input type="hidden" name="userId" value="12309746" />
 
-                <input name="submit" value="Submit" type="submit"/>
+                <input name="submit" th:value="#{auth-bypass.submit}" type="submit"/>
 
-            </form>
 
             <form class="attack-form" accept-charset="UNKNOWN" id="change-password-form"
                   method="POST" name="form"
                   successCallback="onBypassResponse"
                   th:action="@{/auth-bypass/verify-account}"
                   style="display:none"><!-- start off hidden -->
-                <p>Please provide a new password for your account</p>
+                <p th:text="#{auth-bypass.change-password.title}">Please provide a new password for your account</p>
 
-                <p>Password:</p>
+                <p th:text="#{auth-bypass.password}">Password:</p>
                 <input name="newPassword" value="" type="password" /><br/>
 
-                <p>Confirm Password:</p>
+                <p th:text="#{auth-bypass.confirm-password}">Confirm Password:</p>
                 <input name="newPasswordConfirm" value="" type="password" /><br/><br />
 
                 <input type="hidden" name="userId" value="12309746" />
 
-                <input name="submit" value="Submit" type="submit"/>
+                <input name="submit" th:value="#{auth-bypass.submit}" type="submit"/>
 
             </form>
 

@@ -1,32 +1,32 @@
-== Try it! Writing safe code
+== 试一试！编写安全代码
 
-Now it is time to write your own code!
-Your task is to use JDBC to connect to a database and request data from it.
+现在是时候编写您自己的代码了！
+您的任务是使用JDBC连接到数据库并从中请求数据。
 
-*Requirements:*
+*要求：*
 
-* connect to a database
-* perform a query on the database which is immune to SQL injection attacks
-* your query needs to contain at least one string parameter
+* 连接到数据库
+* 在数据库上执行一个能够抵御SQL注入攻击的查询
+* 您的查询需要包含至少一个字符串参数
 
-*Some tips before you start:* +
-For connecting to the database, you can simply assume the constants *DBURL*, *DBUSER* and *DBPW* as given. +
-The content of your query does not matter, as long as the SQL is valid and meets the requirements. +
-All the code you write gets inserted into the main method of a Java class with the name "TestClass" that already imports *java.sql.** for you.
+*开始前的一些提示：* +
+对于数据库连接，您可以简单地假设常量*DBURL*、*DBUSER*和*DBPW*已给出。 +
+只要SQL有效并满足要求，查询的内容并不重要。 +
+您编写的所有代码都将插入到名为"TestClass"的Java类的main方法中，该类已为您导入了*java.sql.**。
 
-Not creative enough to think of your own query? How about you try to retrieve the data of a user with a specific name from a fictional database table called *users*.
+不够有创意想不出自己的查询？您可以尝试从一个名为*users*的虚构数据库表中检索具有特定名称的用户数据。
 
-For example; the following code would compile without any error (but of course does not meet the requirements to complete this lesson).
+例如，以下代码将编译通过而不会出现任何错误（当然，这不符合完成本课程的要求）。
 
 [source,java]
 -------------------------------------------------------
 try {
     Connection conn = null;
-    System.out.println(conn);   //should output 'null'
+    System.out.println(conn);   // 应该输出'null'
 } catch (Exception e) {
-    System.out.println("Oops. Something went wrong!");
+    System.out.println("糟糕，出错了！");
 }
 -------------------------------------------------------
 
-Use your knowledge and write some valid code from scratch in the editor window down below!
-(if you cannot type there it might help to adjust the size of your browser window once, then it should work):
+运用您的知识，在下面的编辑器中从头开始编写一些有效的代码！
+（如果无法输入，调整一次浏览器窗口的大小可能会有所帮助，然后应该就可以正常工作了）：

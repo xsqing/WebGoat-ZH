@@ -1,15 +1,14 @@
-=== Data Definition Language (DDL)
+=== 数据定义语言(DDL)
 
-Data definition language includes commands for defining data structures. DDL commands are commonly used to define a database's schema. The schema refers to the overall structure or organization of the database and. in SQL databases, includes objects such as tables, indexes, views, relationships, triggers, and more.
+数据定义语言包含用于定义数据结构的命令。DDL命令通常用于定义数据库的模式(schema)。模式指的是数据库的整体结构或组织，在SQL数据库中，包括表、索引、视图、关系、触发器等对象。
 
-If an attacker successfully "injects" DDL type SQL commands into a database, he can violate the integrity (using ALTER and DROP statements) and availability (using DROP statements) of a system.
+如果攻击者成功将DDL类型的SQL命令"注入"到数据库中，他就可以破坏系统的完整性(使用ALTER和DROP语句)和可用性(使用DROP语句)。
 
-
-* DDL commands are used for creating, modifying, and dropping the structure of database objects.
-* CREATE - create database objects such as tables and views
-* ALTER - alters the structure of the existing database
-* DROP - delete objects from the database
-* Example:
+* DDL命令用于创建、修改和删除数据库对象的结构。
+* CREATE - 创建数据库对象，如表和视图
+* ALTER - 修改现有数据库的结构
+* DROP - 从数据库中删除对象
+* 示例：
 ** CREATE TABLE employees( +
    &nbsp;&nbsp;&nbsp;&nbsp;userid varchar(6) not null primary key, +
    &nbsp;&nbsp;&nbsp;&nbsp;first_name varchar(20), +
@@ -18,6 +17,6 @@ If an attacker successfully "injects" DDL type SQL commands into a database, he 
    &nbsp;&nbsp;&nbsp;&nbsp;salary varchar(10), +
    &nbsp;&nbsp;&nbsp;&nbsp;auth_tan varchar(6) +
 );
-** This statement creates the employees example table given on page 2.
+** 此语句创建了第2页中给出的employees示例表。
 
-Now try to modify the schema by adding the column "phone" (varchar(20)) to the table "employees". :
+现在尝试通过向"employees"表添加"phone"(varchar(20))列来修改模式：

@@ -1,15 +1,15 @@
-== Authentication Bypasses
+== 认证绕过
 
-Authentication Bypasses happen in many ways but usually take advantage of some flaw in the configuration or logic. Tampering to achieve the right conditions.
+认证绕过以多种方式发生，但通常利用配置或逻辑中的某些缺陷。通过篡改来达到正确的条件。
 
-=== Hidden inputs
+=== 隐藏输入
 
-The simplest form is a reliance on a hidden input in the web page/DOM.
+最简单的形式是依赖于网页/DOM中的隐藏输入。
 
-=== Removing Parameters
+=== 移除参数
 
-Sometimes, if an attacker doesn't know the correct value of a parameter, they may remove it from the submission altogether to see what happens.
+有时，如果攻击者不知道参数的正确值，他们可能会从提交中完全删除该参数，看看会发生什么。
 
-=== Forced Browsing
+=== 强制浏览
 
-If an area of a site is not appropriately protected by configuration, that area of the site may be accessed by guessing/brute-forcing.
+如果网站的某个区域没有通过配置得到适当的保护，那么通过猜测/暴力破解可能会访问到该区域。

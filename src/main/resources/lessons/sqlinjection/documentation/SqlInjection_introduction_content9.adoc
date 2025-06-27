@@ -1,18 +1,15 @@
-== Compromising Integrity with Query chaining
-After compromising the confidentiality of data in the previous lesson, this time we are gonna compromise the *integrity*
-of data by using SQL *query chaining*.
+== 使用查询链破坏数据完整性
+在上节课中，我们破坏了数据的机密性，这次我们将使用SQL*查询链*来破坏数据的*完整性*。
 
-If a severe enough vulnerability exists, SQL injection may be used to compromise the integrity of any data in the database. Successful SQL injection may allow an attacker to change information that he should not even be
-able to access.
+如果存在足够严重的漏洞，SQL注入可能被用来破坏数据库中任何数据的完整性。成功的SQL注入可能允许攻击者更改他们本不应该访问的信息。
 
-=== What is SQL query chaining?
-Query chaining is exactly what it sounds like. With query chaining, you try to append one or more queries to the end of
-the actual query. You can do this by using the *;* metacharacter. A *;* marks the end of a SQL statement; it allows one to start another query right after the initial query without the need to even start a new line.
+=== 什么是SQL查询链？
+查询链就是它听起来的样子。通过查询链，您可以尝试在实际查询的末尾附加一个或多个查询。您可以使用*;*元字符来实现这一点。*;*标记SQL语句的结束；它允许在初始查询之后立即开始另一个查询，甚至不需要换行。
 
-=== It is your turn!
-You just found out that Tobi and Bob both seem to earn more money than you!
-Of course you cannot leave it at that. +
-Better go and _change your own salary so you are earning the most!_
+=== 轮到您了！
+您刚刚发现Tobi和Bob的薪水似乎都比您高！
+当然，您不能就这样算了。
+最好去_修改您自己的薪水，让您成为收入最高的人！_
 
 
-Remember: Your name is John *Smith* and your current TAN is *3SL99A*.
+记住：您的名字是John *Smith*，您当前的TAN是*3SL99A*。

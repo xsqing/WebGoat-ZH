@@ -1,8 +1,7 @@
 
-Enter your name in the input field below and press "Go!" to submit.	The server will accept the request, reverse the
-input and display it back to the user, illustrating the basics of handling an HTTP request.
+在下面的输入框中输入您的名字并点击"开始！"提交。服务器将接受请求，反转输入的内容并显示给用户，这展示了处理HTTP请求的基础知识。
 
-== Try It!
+== 试试看！
 
-Enter your name in the input field below and press "Go!" to submit. Use the Developer Tools to view the HTTP request and response.
-Can you see the response with the reversed username?
+在下面的输入框中输入您的名字并点击"开始！"提交。使用开发者工具查看HTTP请求和响应。
+您能看到包含反转用户名的响应吗？

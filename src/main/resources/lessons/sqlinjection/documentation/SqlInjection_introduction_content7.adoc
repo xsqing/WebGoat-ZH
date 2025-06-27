@@ -1,22 +1,22 @@
-== Severity of SQL injection
+== SQL注入的严重性
 
-=== The severity of SQL injection attacks is limited by
-* Attacker’s skill and imagination
-* Defense in depth countermeasures
-** Input validation
-** Least privilege
-* Database technology
+=== SQL注入攻击的严重性受限于以下因素：
+* 攻击者的技能和想象力
+* 深度防御对策
+** 输入验证
+** 最小权限原则
+* 数据库技术
 
-=== Not all databases support command chaining
+=== 并非所有数据库都支持命令链
 * Microsoft Access
-* MySQL Connector/J and C
+* MySQL Connector/J 和 C
 * Oracle
 
-=== SQL injection is more common in PHP, Classic ASP, Cold Fusion and older languages
-* Languages that do not provide parameterized query support
-* Parameterized queries have been added to newer versions
-* Early adopters of web technology (i.e. Old Code)
+=== SQL注入在PHP、Classic ASP、Cold Fusion和较旧语言中更常见
+* 这些语言不提供参数化查询支持
+* 新版本已添加参数化查询功能
+* 这些是Web技术的早期采用者（即旧代码）
 
-=== Not all databases are equal (SQL Server)
-* Command shell: `master.dbo.xp_cmdshell 'cmd.exe dir c:'`
-* Registry commands: `xp_regread`, `xp_regdeletekey`, …
+=== 并非所有数据库都相同（以SQL Server为例）
+* 命令shell：`master.dbo.xp_cmdshell 'cmd.exe dir c:'`
+* 注册表命令：`xp_regread`、`xp_regdeletekey`等
