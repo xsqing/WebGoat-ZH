@@ -79,6 +79,9 @@
             <div class="dropdown" style="display:inline">
                 <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle" id="lang-button">
                     <div th:switch="${#locale.language}">
+                        <div th:case="'zh'">
+                            <img th:src="@{${'/css/img/'}+${#locale.language}+${'lang.svg'}}"></img><span class="caret"></span>
+                        </div>
                         <div th:case="'nl'">
                             <img th:src="@{${'/css/img/'}+${#locale.language}+${'lang.svg'}}"></img><span class="caret"></span>
                         </div>
@@ -97,6 +100,12 @@
                     <li role="presentation">
                         <a role="menuitem" th:href="@{/start.mvc?lang=en#lesson/WebGoatIntroduction.lesson}">
                             <img th:src="@{${'/css/img/enlang.svg'}}" alt="English" height="20"></img> English
+                        </a>
+                    </li>
+                    <li role="presentation" class="divider"></li>
+                    <li role="presentation">
+                        <a role="menuitem" th:href="@{/start.mvc?lang=zh#lesson/WebGoatIntroduction.lesson}">
+                            <img th:src="@{${'/css/img/zhlang.svg'}}" alt="中文" height="20"></img> 中文 (简体)
                         </a>
                     </li>
                     <li role="presentation" class="divider"></li>
