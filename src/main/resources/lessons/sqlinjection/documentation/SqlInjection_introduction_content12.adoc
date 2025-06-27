@@ -1,11 +1,11 @@
-== 试一试！数字型SQL注入
+== Try It!   Numeric SQL injection
 
-代码中的查询构建了一个动态查询，如前面的示例所示。该查询通过连接数字构建，容易受到数字型SQL注入的攻击：
+The query in the code builds a dynamic query as seen in the previous example.  The query in the code builds a dynamic query by concatenating a number making it susceptible to Numeric SQL injection:
 
 --------------------------------------------------
 "SELECT * FROM user_data WHERE login_count = " + Login_Count + " AND userid = "  + User_ID;
 --------------------------------------------------
 
-使用下面的两个输入字段，尝试从用户表中检索所有数据。
+Using the two Input Fields below, try to retrieve all the data from the users table.
 
-警告：这些字段中只有一个容易受到SQL注入攻击。您需要找出是哪一个，才能成功检索所有数据。
+Warning: Only one of these fields is susceptible to SQL Injection. You need to find out which, to successfully retrieve all the data.

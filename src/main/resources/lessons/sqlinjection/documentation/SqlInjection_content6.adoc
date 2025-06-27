@@ -1,56 +1,56 @@
-== 特殊字符
+== Special Characters
 
 [source]
 ----
-/* */ 	是内联注释
--- , # 	是行注释
+/* */ 	 are inline comments
+-- , # 	 are line comments
 
-示例: SELECT * FROM users WHERE name = 'admin' -- AND pass = 'pass'
+Example: SELECT * FROM users WHERE name = 'admin' -- AND pass = 'pass'
 ----
 
 
 [source]
 ----
-;        允许查询链式执行
+;        allows query chaining
 
-示例: SELECT * FROM users; DROP TABLE users;
+Example: SELECT * FROM users; DROP TABLE users;
 ----
 
 [source]
 ----
-',+,||	 允许字符串连接
-Char()	 不使用引号的字符串
+',+,||	 allows string concatenation
+Char()	 strings without quotes
 
-示例: SELECT * FROM users WHERE name = '+char(27) OR 1=1
+Example: SELECT * FROM users WHERE name = '+char(27) OR 1=1
 ----
 
 
-==  特殊语句
+==  Special Statements
 
-=== 联合(Union)
+=== Union
 
-Union操作符用于合并两个或多个SELECT语句的结果集。
+The Union operator is used, to combine the results of two or more SELECT Statements.
 
-使用UNION时需要注意的规则：
+Rules to keep in mind, when working with a UNION:
 
-- 每个SELECT语句选择的列数必须相同。
-- 第一个SELECT语句中第一列的数据类型必须与第二个（第三个、第四个...）SELECT语句中第一列的数据类型匹配。其他列也适用相同规则。
+- The number of columns selected in each statement must be the same.
+- The datatype of the first column in the first SELECT statement, must match the datatype
+of the first column in the second (third, fourth, ...) SELECT Statement. The Same applies to all other columns.
 
 [source]
 ------
 SELECT first_name FROM user_system_data UNION SELECT login_count FROM user_data;
 ------
 
-UNION ALL语法也允许重复值。
+The UNION ALL Syntax also allows duplicate Values.
 
-=== 连接(Joins)
+=== Joins
 
-Join操作符用于根据相关列组合两个或多个表的行
+The Join operator is used to combine rows from two or more tables, based on a related column
 
 [source]
 -----
 SELECT * FROM user_data INNER JOIN user_data_tan ON user_data.userid=user_data_tan.userid;
 -----
 
-有关JOIN的更多详细信息，请访问：https://www.w3schools.com/sql/sql_join.asp
 For more detailed information about JOINS visit: https://www.w3schools.com/sql/sql_join.asp

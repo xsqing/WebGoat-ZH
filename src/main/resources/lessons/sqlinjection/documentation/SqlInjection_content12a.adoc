@@ -1,12 +1,12 @@
-== 仅靠输入验证是不够的！！
+== Input validation alone is not enough!!
 
-您需要同时做两件事：使用参数化查询并验证从用户那里接收到的输入。在StackOverflow上，
-您会看到很多答案说输入验证就足够了。*然而*，在您意识到验证被绕过之前，
-您的应用程序可能已经存在SQL注入漏洞。
+You need to do both, use parametrized queries and validate the input received from the user. On StackOverflow you will
+see a lot of answers stating that input validation is enough. *However* it only takes you so far before you know
+the validation is broken, and you have an SQL injection in your application.
 
-这里有一篇很好的文章解释了为什么仅靠输入验证是不够的：https://twitter.com/marcan42/status/1238004834806067200?s=21
+A nice read why it is not enough can be found https://twitter.com/marcan42/status/1238004834806067200?s=21
 
-让我们重复之前的一个任务，开发者已经通过过滤修复了可能的SQL注入，您能
-发现这种方法中的弱点吗？
+Let's repeat one of the previous assignments, the developer fixed the possible SQL injection with filtering, can you
+spot the weakness in this approach?
 
-点击此处查看课程目标：link:start.mvc#lesson/SqlInjectionAdvanced.lesson/2[这里]。
+Read about the lesson goal link:start.mvc#lesson/SqlInjectionAdvanced.lesson/2[here].

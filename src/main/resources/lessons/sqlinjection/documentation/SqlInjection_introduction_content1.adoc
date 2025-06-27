@@ -1,39 +1,39 @@
-== 什么是SQL？
+== What is SQL?
 
-SQL是一种标准化的编程语言（1986年成为ANSI标准，1987年成为ISO标准），用于管理关系型数据库并对其中的数据进行各种操作。
+SQL is a standardized (ANSI in 1986, ISO in 1987) programming language which is used for managing relational databases and performing various operations on the data in them.
 
-数据库是数据的集合。数据被组织成行、列和表，并通过索引使查找相关信息更加高效。
+A database is a collection of data. The data is organized into rows, columns and tables, and indexed to make finding relevant information more efficient.
 
-包含员工数据的SQL表示例；表名为'employees'：
+Example SQL table containing employee data; the name of the table is 'employees':
 
-员工表
+Employees Table
 |===
-|用户ID |名字 |姓氏 |部门 |薪水 |认证码 |
+|userid |first_name |last_name |department |salary |auth_tan |
 
-|32147|Paulina|Travers|会计部|$46.000|P45JSI|
-|89762|Tobi|Barnett|开发部|$77.000|TA9LL1|
-|96134|Bob|Franco|市场部|$83.700|LO9S2V|
-|34477|Abraham|Holman|开发部|$50.000|UU2ALK|
-|37648|John|Smith|市场部|$64.350|3SL99A|
+|32147|Paulina|Travers|Accounting|$46.000|P45JSI|
+|89762|Tobi|Barnett|Development|$77.000|TA9LL1|
+|96134|Bob|Franco|Marketing|$83.700|LO9S2V|
+|34477|Abraham|Holman|Development|$50.000|UU2ALK|
+|37648|John|Smith|Marketing|$64.350|3SL99A|
 
 |===
 
-一家公司在他们的数据库中保存了以下员工信息：
-一个唯一的员工编号('userid')、姓氏、名字、部门、薪水和交易认证号码('auth_tan')。每条信息都存储在一个单独的列中，每一行代表公司的一名员工。
+A company saves the following employee information in their databases:
+a unique employee number ('userid'), last name, first name, department, salary and a transaction authentication number ('auth_tan'). Each of these pieces of information is stored in a separate column and each row represents one employee of the company.
 
-SQL查询可用于修改数据库表及其索引结构，以及添加、更新和删除数据行。
+SQL queries can be used to modify a database table and its index structures and add, update and delete rows of data.
 
-SQL命令主要有三类：
+There are three main categories of SQL commands:
 
-* 数据操作语言(DML)
-* 数据定义语言(DDL)
-* 数据控制语言(DCL)
+* Data Manipulation Language (DML)
+* Data Definition Language (DDL)
+* Data Control Language (DCL)
 
-攻击者可以利用这些命令类型来破坏系统的机密性、完整性和/或可用性。继续本课程以了解有关SQL命令类型及其与保护目标的关系的更多信息。
+Each of these command types can be used by attackers to compromise the confidentiality, integrity, and/or availability of a system. Proceed with the lesson to learn more about the SQL command types and how they relate to protections goals.
 
-如果您还在学习SQL并需要更多信息或练习，可以访问 http://www.sqlcourse.com/ 获取免费的交互式在线培训。
+If you are still struggling with SQL and need more information or practice, you can visit http://www.sqlcourse.com/ for free and interactive online training.
 
-=== 轮到您了！
-查看示例表。
-尝试检索Bob Franco的部门。
-请注意，您在此任务中已被授予完全管理员权限，可以在不进行身份验证的情况下访问所有数据。
+=== It is your turn!
+Look at the example table.
+Try to retrieve the department of the employee Bob Franco.
+Note that you have been granted full administrator privileges in this assignment and can access all data without authentication.

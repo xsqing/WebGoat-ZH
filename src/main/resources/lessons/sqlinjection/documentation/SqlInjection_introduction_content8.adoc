@@ -1,26 +1,26 @@
-== 使用字符串SQL注入破坏机密性
-如果系统容易受到SQL注入攻击，那么该系统的CIA三要素（机密性、完整性和可用性）的各个方面都可能被轻易破坏_（如果您不熟悉CIA三要素，请查看通用类别中的CIA三要素课程）_。
-在接下来的三节课中，您将学习如何使用_SQL字符串注入_或_查询链_等技术来破坏CIA三要素的每个方面。
+== Compromising confidentiality with String SQL injection
+If a system is vulnerable to SQL injections, aspects of that system's CIA triad can be easily compromised _(if you are unfamiliar with the CIA triad, check out the CIA triad lesson in the general category)_.
+In the following three lessons you will learn how to compromise each aspect of the CIA triad using techniques like _SQL string injections_ or _query chaining_.
 
-在本课中，我们将重点讨论*机密性*。
-攻击者可以轻松地利用SQL注入破坏机密性；例如，成功的SQL注入可以让攻击者从数据库中读取敏感数据，如信用卡号。
+In this lesson we will look at *confidentiality*.
+Confidentiality can be easily compromised by an attacker using SQL injection; for example, successful SQL injection can allow the attacker to read sensitive data like credit card numbers from a database.
 
-=== 什么是字符串SQL注入？
-如果应用程序仅通过将用户提供的字符串连接到查询中来构建SQL查询，则该应用程序可能非常容易受到字符串SQL注入的攻击。
-更具体地说，如果用户提供的字符串在没有任何清理或准备的情况下直接连接到SQL查询中，那么您可能只需在输入字段中插入引号就能修改查询的行为。
-例如，您可以用引号结束字符串参数，然后在后面输入自己的SQL。
+=== What is String SQL injection?
+If an application builds SQL queries simply by concatenating user supplied strings to the query, the application is likely very susceptible to String SQL injection. +
+More specifically, if a user supplied string simply gets concatenated to a SQL query without any sanitization or preparation, then you may be able to modify the query's behavior by simply inserting quotation marks into an input field.
+For example, you could end the string parameter with quotation marks and input your own SQL after that.
 
-=== 轮到您了！
-您是一家大公司的员工，名叫John *Smith*。
-公司有一个内部系统，允许所有员工查看自己的内部数据，如所在部门和薪水。
+=== It is your turn!
+You are an employee named John *Smith* working for a big company.
+The company has an internal system that allows all employees to see their own internal data such as the department they work in and their salary.
 
-系统要求员工使用唯一的_认证TAN_来查看他们的数据。
-您当前的TAN是*3SL99A*。
+The system requires the employees to use a unique _authentication TAN_ to view their data. +
+Your current TAN is *3SL99A*.
 
-由于您一直渴望成为收入最高的员工，您想利用系统漏洞，不再查看自己的内部数据，而是_查看所有同事的数据_以了解他们当前的薪水。
+Since you always have the urge to be the most highly paid employee, you want to exploit the system so that instead of viewing your own internal data, _you want to take a look at the data of all your colleagues_ to check their current salaries.
 
-使用下面的表单，尝试从*employees*表中检索所有员工数据。您不需要知道任何特定的姓名或TAN即可获取所需信息。
-您已经发现执行您请求的查询如下所示：
+Use the form below and try to retrieve all employee data from the *employees* table. You should not need to know any specific names or TANs to get the information you need. +
+You already found out that the query performing your request looks like this:
 ------------------------------------------------------------
 "SELECT * FROM employees WHERE last_name = '" + name + "' AND auth_tan = '" + auth_tan + "'";
 ------------------------------------------------------------

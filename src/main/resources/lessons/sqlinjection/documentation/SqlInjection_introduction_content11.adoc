@@ -1,9 +1,9 @@
-== 试一试！字符串SQL注入
+== Try It!   String SQL injection
 
-代码中的查询构建了一个动态查询，如前面的示例所示。该查询通过连接字符串构建，容易受到字符串SQL注入的攻击：
+The query in the code builds a dynamic query as seen in the previous example.  The query is built by concatenating strings making it susceptible to String SQL injection:
 
 ------------------------------------------------------------
 "SELECT * FROM user_data WHERE first_name = 'John' AND last_name = '" + lastName + "'";
 ------------------------------------------------------------
 
-尝试使用下面的表单从用户表中检索所有用户。您不需要知道任何特定的用户名即可获取完整列表。
+Try using the form below to retrieve all the users from the users table. You should not need to know any specific user name to get the complete list.

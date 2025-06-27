@@ -1,18 +1,18 @@
-== SQL注入的后果
+== Consequences of SQL injection
 
-=== 成功的SQL注入攻击可以：
-* 读取和修改数据库中的敏感数据
-* 在数据库上执行管理操作
-** 关闭审计或数据库管理系统
-** 清空表和日志
-** 添加用户
-* 恢复数据库管理系统文件系统上特定文件的内容
-* 向操作系统发出命令
+=== A successful SQL injection exploit can:
+* Read and modify sensitive data from the database
+* Execute administrative operations on the database
+** Shutdown auditing or the DBMS
+** Truncate tables and logs
+** Add users
+* Recover the content of a given file present on the DBMS file system
+* Issue commands to the operating system
 
-=== SQL注入攻击允许攻击者：
-* 伪造身份
-* 篡改现有数据
-* 引发否认问题，如使交易无效或更改余额
-* 完全泄露系统上的所有数据
-* 销毁数据或使其不可用
-* 成为数据库服务器的管理员
+=== SQL injection attacks allow attackers to
+* Spoof identity
+* Tamper with existing data
+* Cause repudiation issues such as voiding transactions or changing balances
+* Allow the complete disclosure of all data on the system
+* Destroy the data or make it otherwise unavailable
+* Become administrator of the database server
